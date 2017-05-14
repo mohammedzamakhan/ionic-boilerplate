@@ -7,10 +7,14 @@ stages:
   
 node_js:
   - "6"
+  
+ruby:
+
 
 before_script:
   - npm i -g yarn --cache-min 999999999
   - yarn
+  - rvm install 2.2.2
   - gem install scss_lint
   - export DISPLAY=:99
   - npm run post-install
