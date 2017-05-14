@@ -22,17 +22,7 @@ module.exports = (config) => {
                 chunks: false
             }
         },
-        reporters: ['mocha', 'coverage', 'remap-coverage'],
-
-        coverageReporter: {
-            type: 'in-memory'
-        },
-
-        remapCoverageReporter: {
-            'text-summary': null,
-            json: './coverage/report/coverage-final.json',
-            html: './coverage/html'
-        },
+        reporters: ['mocha'],
         port: 9876,
         colors: true,
         client: {
@@ -69,6 +59,7 @@ module.exports = (config) => {
 
         configuration.remapCoverageReporter = {
             'text-summary': null,
+            json: './coverage/report/coverage-final.json',
             html: './coverage/html'
         };
     }
