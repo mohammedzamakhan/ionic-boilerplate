@@ -37,6 +37,9 @@ build_web:
   after_success:
     - bash <(curl -s https://codecov.io/bash)
 
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+  
 build_ios:
   stage: deploy
   only:
