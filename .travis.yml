@@ -34,6 +34,8 @@ build_web:
     - npm run test
     - npm run build
     - npm run e2e
+  after_success:
+    - bash <(curl -s https://codecov.io/bash)
 
 build_ios:
   stage: deploy
